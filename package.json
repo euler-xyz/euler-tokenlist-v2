@@ -1,0 +1,21 @@
+{
+  "name": "euler-tokenlist-generator",
+  "version": "1.0.0",
+  "description": "A Node.js script to generate a token list using the CoinGecko API",
+  "scripts": {
+    "generate": "node generateTokenList.js",
+    "start": "npm run generate && echo '✅ Token list generation complete! Remember to:\n- notify BE team\n- update token groups in AssetFilter if you added new stablecoins or LSTs.\n'",
+    "doppler:login": "./scripts/dopplerLogin.sh",
+    "doppler:sync": "./scripts/dopplerSync.sh"
+  },
+  "dependencies": {
+    "axios": "^0.28.0",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "joi": "^17.13.3",
+    "viem": "^2.22.12"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
